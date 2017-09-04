@@ -179,6 +179,12 @@
 	# Make `git push` push relevant annotated tags when pushing branches out.
 	followTags = true
 
+[branch]
+	autosetuprebase = always
+
+[rerere]
+	enabled = true
+
 # URL shorthands
 
 [url "git@github.com:"]

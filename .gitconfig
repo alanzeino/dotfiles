@@ -137,11 +137,19 @@
 
 	# Detect copies as well as renames
 	renames = copies
+	# Make Kaleidoscope the diff tool
+	tool = Kaleidoscope
 
 [diff "bin"]
 
 	# Use `hexdump` to diff binary files
 	textconv = hexdump -v -C
+
+[difftool "Kaleidoscope"]
+	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+
+[difftool]
+	prompt = false
 
 [help]
 
@@ -152,6 +160,15 @@
 
 	# Include summaries of merged commits in newly created merge commit messages
 	log = true
+	# Make Kaleidoscope the merge tool
+	tool = Kaleidoscope
+
+[mergetool "Kaleidoscope"]
+	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+	trustexitcode = true
+
+[mergetool]
+	prompt = false
 
 [push]
 

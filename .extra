@@ -9,3 +9,7 @@ alias pi="pod install"
 alias gca="git commit --amend --no-edit"
 alias gpr="git pull --rebase origin master"
 alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
+
+# Delete the current branch
+function gdbr() { CURR_BRANCH=$(git rev-parse --abbrev-ref HEAD); git checkout master; git branch -D $CURR_BRANCH; }
+export -f gdbr

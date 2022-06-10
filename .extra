@@ -11,5 +11,5 @@ alias gpr="git pull --rebase origin master"
 alias s="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
 
 # Delete the current branch
-function gdbr() { CURR_BRANCH=$(git rev-parse --abbrev-ref HEAD); git checkout master; git branch -D $CURR_BRANCH; }
+function gdbr() { CURR_BRANCH=$(git rev-parse --abbrev-ref HEAD); git checkout main; git branch -D $CURR_BRANCH; }
 export -f gdbr

@@ -7,6 +7,7 @@ alias gb="git branch"
 alias gl="git log"
 alias gca="git commit --amend --no-edit"
 alias gpr="git pull --rebase origin main"
+alias gch="git checkout HEAD~1"
 alias s="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
 
 # Delete the current branch
